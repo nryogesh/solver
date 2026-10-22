@@ -1,0 +1,12 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot - Smart Equation Solver",
+            "request": "launch",
+            "mainClass": "com.example.equationsolver.EquationSolverApplication",
+            "projectName": "smart-equation-solver"
+        }
+    ]
+}

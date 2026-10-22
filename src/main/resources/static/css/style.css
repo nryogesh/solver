@@ -1,0 +1,255 @@
+/* ================================================================
+   Smart Equation Solver — Custom Styles
+   Bootstrap 5 Enhanced
+   ================================================================ */
+
+/* ── Root Variables ────────────────────────────────────────────── */
+:root {
+    --primary: #0d6efd;
+    --success: #198754;
+    --warning: #ffc107;
+    --info: #0dcaf0;
+    --danger: #dc3545;
+    --light-bg: #f8f9fa;
+    --border-radius: 12px;
+    --card-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* ── Base ────────────────────────────────────────────────────── */
+body {
+    background-color: #f0f4f8;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    color: #212529;
+}
+
+/* ── Hero Section ────────────────────────────────────────────── */
+.hero-section {
+    background: linear-gradient(135deg, #e8f0fe 0%, #f0f9ff 50%, #ecfdf5 100%);
+    border-bottom: 1px solid #dee2e6;
+}
+
+.hero-section h1 {
+    font-size: 2rem;
+}
+
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 1.4rem;
+    }
+}
+
+/* ── Cards ───────────────────────────────────────────────────── */
+.card {
+    border: none;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    transition: box-shadow 0.2s ease;
+}
+
+.card:hover {
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+}
+
+.card-header {
+    border-radius: var(--border-radius) var(--border-radius) 0 0 !important;
+    padding: 1rem 1.25rem;
+}
+
+/* ── Drop Zone ───────────────────────────────────────────────── */
+.drop-zone {
+    border: 2.5px dashed #0d6efd;
+    border-radius: 10px;
+    background: #f8f9ff;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s;
+    min-height: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.drop-zone:hover,
+.drop-zone.drag-over {
+    background: #e8f0fe;
+    border-color: #0a58ca;
+}
+
+.drop-zone.has-file {
+    border-color: #198754;
+    background: #f0fff4;
+}
+
+/* ── Info Cards (classification) ─────────────────────────────── */
+.info-card {
+    border: 1px solid #e9ecef;
+    transition: transform 0.1s;
+}
+
+.info-card:hover {
+    transform: translateY(-2px);
+}
+
+.info-value {
+    font-size: 1.1rem;
+}
+
+/* ── Final Answer Box ─────────────────────────────────────────── */
+.final-answer-box {
+    background: linear-gradient(135deg, #198754, #0d6efd);
+    color: white;
+    border-radius: 10px;
+}
+
+.final-answer-text {
+    color: white;
+    font-family: 'Courier New', monospace;
+    font-size: 1.3rem;
+    word-break: break-word;
+}
+
+/* ── Steps Container ────────────────────────────────────────── */
+.steps-container {
+    max-height: 380px;
+    overflow-y: auto;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 12px;
+    background: #fafafa;
+    scrollbar-width: thin;
+}
+
+.step-item {
+    padding: 7px 10px;
+    border-left: 3px solid #0d6efd;
+    margin-bottom: 6px;
+    background: white;
+    border-radius: 0 6px 6px 0;
+    font-size: 0.88rem;
+    font-family: 'Courier New', monospace;
+    white-space: pre-wrap;
+    word-break: break-word;
+    line-height: 1.5;
+}
+
+.step-item:last-child {
+    border-left-color: #198754;
+    background: #f0fff4;
+}
+
+/* ── Textarea ─────────────────────────────────────────────────── */
+textarea.form-control {
+    font-family: 'Courier New', monospace;
+    font-size: 0.95rem;
+    resize: vertical;
+    min-height: 70px;
+}
+
+/* ── Example Buttons ─────────────────────────────────────────── */
+.example-btn {
+    font-size: 0.75rem;
+    padding: 3px 8px;
+}
+
+/* ── Navbar ──────────────────────────────────────────────────── */
+.navbar {
+    padding: 0.75rem 1rem;
+}
+
+.navbar-brand {
+    font-size: 1.2rem;
+}
+
+/* ── Loading Spinner ─────────────────────────────────────────── */
+#loadingSpinner {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(255,255,255,0.8);
+    z-index: 9999;
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ── Badge ───────────────────────────────────────────────────── */
+.badge {
+    font-size: 0.75rem;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+/* ── Alert ───────────────────────────────────────────────────── */
+.alert {
+    border-radius: 10px;
+    border: none;
+    font-size: 0.9rem;
+}
+
+/* ── Buttons ─────────────────────────────────────────────────── */
+.btn {
+    border-radius: 8px;
+    font-size: 0.9rem;
+    padding: 8px 16px;
+    transition: all 0.15s ease;
+}
+
+.btn-lg {
+    padding: 12px 20px;
+    font-size: 1rem;
+}
+
+.btn:active {
+    transform: scale(0.97);
+}
+
+/* ── Responsive ──────────────────────────────────────────────── */
+@media (max-width: 576px) {
+    .container {
+        padding: 0 12px;
+    }
+
+    .d-flex.gap-2 {
+        flex-direction: column;
+    }
+
+    .step-item {
+        font-size: 0.8rem;
+    }
+
+    .final-answer-text {
+        font-size: 1.1rem;
+    }
+}
+
+/* ── Copy button state ───────────────────────────────────────── */
+.btn-copied {
+    background-color: #198754 !important;
+    border-color: #198754 !important;
+    color: white !important;
+}
+
+/* ── Solve animation ─────────────────────────────────────────── */
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#solutionResult, #classificationResult {
+    animation: slideInUp 0.3s ease;
+}
+
+/* ── Code ────────────────────────────────────────────────────── */
+code {
+    background: #f1f3f5;
+    padding: 2px 8px;
+    border-radius: 4px;
+    color: #d63384;
+    font-size: 0.9rem;
+}
